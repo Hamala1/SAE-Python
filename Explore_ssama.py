@@ -50,8 +50,11 @@ def est_avant(profil1, profil2):
     res= 0
     if profil1[0]>profil2[0]:
         res = True
-    elif profil1[0]>profil2[0] :
-        res= False
+    elif profil1[1][1]>profil2[1][1] :
+        res= True
+    else:
+        res=False
+    return res
 
 def test_est_avant():
     assert ssma.est_avant(profil4, profil1) is True    # Belgium avant France
