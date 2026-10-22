@@ -34,8 +34,8 @@ liste1 = [(3, 'Belgium', 'Facebook', 3.0, 8.0, 7, 4),
 # deux listes triées qui se recouvrent (leur fusion redonne liste1)
 liste2 = [(3, 'Belgium', 'Facebook', 3.0, 8.0, 7, 4),
           (12, 'France', 'Instagram', 5.2, 6.5, 6, 8),
-          (7, 'Italy', 'WhatsApp', 2.1, 7.5, 8, 3)]
-
+          (7, 'Italy', 'WhatsApp', 2.1, 7.5, 8, 3) 
+            
 liste3 = [(17, 'Belgium', 'Instagram', 6.0, 5.5, 5, 8),
           (12, 'France', 'Instagram', 5.2, 6.5, 6, 8),
           (45, 'France', 'TikTok', 7.0, 5.0, 4, 9),

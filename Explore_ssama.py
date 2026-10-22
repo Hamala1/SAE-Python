@@ -18,7 +18,7 @@ profil2 = (45, 'France', 'TikTok', 7.0, 5.0, 4, 9)
 profil3 = (7, 'Italy', 'WhatsApp', 2.1, 7.5, 8, 3)
 profil4 = (3, 'Belgium', 'Facebook', 3.0, 8.0, 7, 4)
 
-def est_dependant(profil):
+def est_dependant(profil):                      #Teste a faire
     """indique si l'étudiant est considéré comme dépendant aux réseaux sociaux,
     c'est-à-dire si son score d'addiction atteint le seuil SEUIL_ADDICTION
 
@@ -28,16 +28,11 @@ def est_dependant(profil):
     Returns:
         bool: True si l'étudiant est dépendant, False sinon
     """
-    res =0
-    if profil >= SEUIL_ADDICTION:
-        res  = True
-    else:
-        res = False
-    return res
+    return profil[6] >= SEUIL_ADDICTION
 
 def test_est_dependant():
-    assert ssma.est_dependant(profil1) is True
-    assert ssma.est_dependant(profil3) is False
+    assert est_dependant(profil1) is True
+    assert est_dependant(profil3) is False
 
 def est_avant(profil1, profil2):
     """indique si profil1 se place avant profil2 dans l'ordre de tri des listes de profils,
@@ -52,7 +47,16 @@ def est_avant(profil1, profil2):
     Returns:
         bool: True si profil1 se place avant profil2, False sinon
     """
-    pass
+    res= 0
+    if profil1[0]>profil2[0]:
+        res = True
+    elif profil1[0]>profil2[0] :
+        res= False
+
+def test_est_avant():
+    assert ssma.est_avant(profil4, profil1) is True    # Belgium avant France
+    assert ssma.est_avant(profil1, profil4) is False
+
 
 
 def moyenne_heures_ecran(liste_profils):
